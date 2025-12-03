@@ -2,6 +2,12 @@
 
 A professional MIDI piano roll editor with AI-powered melody generation capabilities. Available as standalone application and VST3 plugin.
 
+## Previews
+
+![Preview 1](preview/preview1.png)
+![Preview 2](preview/preview2.png)
+![Preview 3](preview/preview3.png)
+
 ## Installation
 
 ### Standalone Application

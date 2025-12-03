@@ -2,9 +2,9 @@
   "Name": "Aurora-Melody",
   "Version": "1.0.0",
   "Factory Info": {
-    "Vendor": "yourcompany",
-    "URL": "",
-    "E-Mail": "",
+    "Vendor": "Aurora Labs AI",
+    "URL": "https://github.com/Aurora-LABS-Ai",
+    "E-Mail": "aurora.labs.ai@gmail.com",
     "Flags": {
       "Unicode": true,
       "Classes Discardable": false,
@@ -16,7 +16,7 @@
       "CID": "ABCDEF019182FAEB41754D65414D656C",
       "Category": "Audio Module Class",
       "Name": "Aurora-Melody",
-      "Vendor": "yourcompany",
+      "Vendor": "Aurora Labs AI",
       "Version": "1.0.0",
       "SDKVersion": "VST 3.7.12",
       "Sub Categories": [
@@ -32,7 +32,7 @@
       "CID": "ABCDEF011234ABCD41754D65414D656C",
       "Category": "Component Controller Class",
       "Name": "Aurora-Melody",
-      "Vendor": "yourcompany",
+      "Vendor": "Aurora Labs AI",
       "Version": "1.0.0",
       "SDKVersion": "VST 3.7.12",
       "Sub Categories": [
