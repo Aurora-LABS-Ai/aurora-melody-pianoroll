@@ -36,36 +36,78 @@ The `plugins` folder contains generator plugins:
 | `chord-progression.aml` | Chord progression builder |
 | `ostinato-generator.aml` | Ostinato pattern generator |
 
-## AI Service (Optional)
+## AI Melody Generation
 
-The `ai-service` folder contains a Python server for AI-powered melody generation.
+Aurora Melody uses a custom-trained AI model for melody generation. The model is available on Hugging Face.
 
-### Setup
+### Step 1: Download the Model
+
+Download all files from the Hugging Face repository:
+
+https://huggingface.co/alvanalrakib/aurora-melody
+
+Required files:
+- `best_model.safetensors` - Model weights
+- `best_model_config.json` - Model configuration
+- `vocabulary.pkl` - Tokenizer vocabulary
+- `aurora_tokenizer-*.whl` - Aurora Tokenizer wheel file
+
+### Step 2: Install Aurora Tokenizer
+
+Install the tokenizer wheel file from the downloaded files:
+
+```bash
+pip install aurora_tokenizer-<version>.whl
+```
+
+### Step 3: Install AI Service Dependencies
 
 ```bash
 cd ai-service
 pip install -r requirements.txt
 ```
 
-### Configuration
+### Step 4: Configure Model Paths
 
-1. Copy `.env.example` to `.env`
-2. Add your API key (e.g., Google Gemini API key)
-3. Edit `config.yaml` for additional settings
+Edit `ai-service/config.yaml` and update the paths to your downloaded model files:
 
-### Running the Server
+```yaml
+model:
+  # Path to model weights (.safetensors)
+  weights: "C:/path/to/your/models/best_model.safetensors"
+
+  # Path to model config (.json)
+  config: "C:/path/to/your/models/best_model_config.json"
+  
+  # Path to vocabulary (.pkl)
+  vocab: "C:/path/to/your/models/vocabulary.pkl"
+```
+
+Use forward slashes (/) or double backslashes (\\) for Windows paths.
+
+### Step 5: Run the AI Server
 
 Windows:
 ```bash
+cd ai-service
 start_server.bat
 ```
 
 Linux/macOS:
 ```bash
+cd ai-service
 ./start_server.sh
 ```
 
 The server runs on `http://localhost:8765` by default.
+
+### Step 6: Use AI Plugin
+
+1. Open Aurora Melody
+2. Go to the Plugins tab
+3. Select an AI plugin (e.g., Gemini Melody AI)
+4. Configure generation parameters
+5. Click Generate
 
 ## Creating Custom Plugins
 
@@ -115,6 +157,8 @@ Place the resulting `.aml` file in the `plugins` folder.
 
 - Windows 10 or later (64-bit)
 - 4GB RAM minimum
+- Python 3.8+ (for AI service)
+- CUDA compatible GPU (optional, for faster AI generation)
 - VST3 compatible DAW (for plugin version)
 
 ## License
@@ -123,6 +167,7 @@ MIT License
 
 ## Links
 
-- SDK Repository: https://github.com/Aurora-LABS-Ai/aurora-melody-sdk
-- Issue Tracker: https://github.com/Aurora-LABS-Ai/aurora-melody-pianoroll/issues
+- Model: https://huggingface.co/alvanalrakib/aurora-melody
+- SDK: https://github.com/Aurora-LABS-Ai/aurora-melody-sdk
+- Issues: https://github.com/Aurora-LABS-Ai/aurora-melody-pianoroll/issues
 
