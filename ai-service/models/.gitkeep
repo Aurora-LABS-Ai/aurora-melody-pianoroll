@@ -1,0 +1,5 @@
+# Place your model files here:
+# - melody_model.safetensors (model weights)
+# - config.json (model configuration)
+# - vocab.pkl (vocabulary file)
+

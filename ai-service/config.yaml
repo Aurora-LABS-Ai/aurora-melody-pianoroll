@@ -1,0 +1,54 @@
+# ============================================================================
+# Aurora Melody AI Server Configuration
+# ============================================================================
+#
+# Copy this file to config.yaml and edit the paths below.
+# The server will automatically load this config on startup.
+#
+# Priority order:
+#   1. Command-line arguments (highest)
+#   2. Environment variables
+#   3. config.yaml (this file)
+#   4. Default values (lowest)
+# ============================================================================
+
+# Model files (REQUIRED - update these paths!)
+# NOTE: Use forward slashes (/) or double backslashes (\\) for Windows paths
+model:
+  # Path to model weights (.safetensors)
+  weights: "E:/AURORA-MELODY-TOKENIZER/Aurora-Latest-Models-10k/best_model.safetensors"
+
+  # Path to model config (.json)
+  config: "E:/AURORA-MELODY-TOKENIZER/Aurora-Latest-Models-10k/best_model_config.json"
+  
+  # Path to vocabulary (.pkl)
+  vocab: "E:/AURORA-MELODY-TOKENIZER/Aurora-Latest-Models-10k/vocabulary.pkl"
+
+# Server settings
+server:
+  # Host to bind to (use 0.0.0.0 for external access)
+  host: "127.0.0.1"
+  
+  # Port number
+  port: 8765
+
+# Device settings
+device:
+  # Device to use: "cuda", "cpu", or "auto" (auto-detect)
+  type: "auto"
+  
+  # CUDA device index (if multiple GPUs)
+  cuda_device: 0
+
+# Generation defaults (can be overridden per-request)
+generation:
+  temperature: 1.0
+  top_k: 50
+  top_p: 0.9
+  repetition_penalty: 1.1
+  max_length: 200
+  tempo: 120
+
+# Logging
+logging:
+  level: "INFO"  # DEBUG, INFO, WARNING, ERROR

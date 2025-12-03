@@ -1,0 +1,48 @@
+{
+  "Name": "Aurora-Melody",
+  "Version": "1.0.0",
+  "Factory Info": {
+    "Vendor": "yourcompany",
+    "URL": "",
+    "E-Mail": "",
+    "Flags": {
+      "Unicode": true,
+      "Classes Discardable": false,
+      "Component Non Discardable": false,
+    },
+  },
+  "Classes": [
+    {
+      "CID": "ABCDEF019182FAEB41754D65414D656C",
+      "Category": "Audio Module Class",
+      "Name": "Aurora-Melody",
+      "Vendor": "yourcompany",
+      "Version": "1.0.0",
+      "SDKVersion": "VST 3.7.12",
+      "Sub Categories": [
+        "Instrument",
+        "Synth",
+      ],
+      "Class Flags": 2,
+      "Cardinality": 2147483647,
+      "Snapshots": [
+      ],
+    },
+    {
+      "CID": "ABCDEF011234ABCD41754D65414D656C",
+      "Category": "Component Controller Class",
+      "Name": "Aurora-Melody",
+      "Vendor": "yourcompany",
+      "Version": "1.0.0",
+      "SDKVersion": "VST 3.7.12",
+      "Sub Categories": [
+        "Instrument",
+        "Synth",
+      ],
+      "Class Flags": 2,
+      "Cardinality": 2147483647,
+      "Snapshots": [
+      ],
+    },
+  ],
+}
